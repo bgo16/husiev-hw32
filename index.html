@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .block {
+      display: flex;
+      justify-content: space-between;
+    }
+    .div {
+      width: 190px;
+      height: 90px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+    form {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="block">
+    <div class="div">
+      <ul class="category-list"></ul>
+    </div>
+    <div class="div">
+      <ul class="product-list"></ul>
+    </div>
+    <div class="div">
+      <ul class="product-info"></ul>
+    </div>
+  </div>
+  <form>
+    <label>
+      Full name:
+      <input name="fullname" id="fullName" type="text" required />
+      <br />
+    </label>
+
+    <label>
+      City:
+      <select name="city" id="city">
+        <option value="Київ">Київ</option>
+        <option value="Кривий Ріг">Кривий Ріг</option>
+        <option value="Дніпро">Дніпро</option>
+      </select>
+    </label>
+    <br />
+
+    <label>
+      Composition of 'Nova Poshta' to be sent:
+      <input name="nova-poshta" id="nova-poshta" type="number" required /><br />
+    </label>
+
+    <label
+      >Спосіб оплати:
+      <span>Pay on delivery</span>
+      <input
+        type="radio"
+        id="delivery"
+        name="payment"
+        value="Pay on delivery"
+        required
+      />
+
+      <span>Pay by bank card</span>
+      <input
+        type="radio"
+        id="card"
+        name="payment"
+        value="By bank card"
+        required
+      />
+    </label>
+    <br />
+
+    <label>
+      Quantity of products purchased:
+      <input name="quantity" id="quantity" type="number" required />
+      <br />
+    </label>
+
+    <label>
+      Comment on the order:
+      <br />
+      <textarea name="comment" id="comment" style="resize: none"></textarea>
+      <br />
+    </label>
+    <input type="submit" value="Submit" />
+  </form>
+  <button class="my-orders-btn">My Orders</button>
+  <div class="order-list"></div>
+  <script src="script.js"></script>
+</body>
