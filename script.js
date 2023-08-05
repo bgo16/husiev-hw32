@@ -78,6 +78,9 @@ function renderProductInfo(product) {
   productInfo.appendChild(button);
 }
 
+/////////////////////////////////////////////////////////
+
+
 function formValidate() {
   for (let i = 0; i < form.elements.length - 2; i++) {
     if (form.elements[i].value === '') {
@@ -113,6 +116,8 @@ form.addEventListener('submit', (e) => {
   alert(orderWhithoutTrash);
   form.reset();
 });
+
+/////////////////////////////////////////////////////////
 
 myOrdersBtn.addEventListener('click', orderBtnClicked);
 
